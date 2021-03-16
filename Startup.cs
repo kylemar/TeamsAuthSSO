@@ -43,7 +43,8 @@ namespace TeamsAuthSSO
                     {
                         ValidAudiences = AuthenticationHelper.GetValidAudiences(Configuration),
                         ValidIssuers = AuthenticationHelper.GetValidIssuers(Configuration),
-                        AudienceValidator = AuthenticationHelper.AudienceValidator
+                        AudienceValidator = AuthenticationHelper.AudienceValidator,
+                        IssuerValidator = AuthenticationHelper.IssuerValidator
                     };
                 });
         }

@@ -87,6 +87,28 @@ namespace TeamsAuthSSO.Helper
         }
 
         /// <summary>
+        /// Issuer Validator.
+        /// </summary>
+        /// <param name="tokenAudiences">Token audiences.</param>
+        /// <param name="securityToken">Security token.</param>
+        /// <param name="validationParameters">Validation parameters.</param>
+        /// <returns>Audience validator status.</returns>
+        public static string IssuerValidator(
+            string tokenIssuer, 
+            SecurityToken securityToken, 
+            TokenValidationParameters validationParameters)
+        {
+            if (tokenIssuer == null)
+            {
+                throw new ApplicationException("No issuer defined in token!");
+            }
+
+
+            return "https://login.microsoftonline.com";
+        }
+
+
+        /// <summary>
         /// Audience Validator.
         /// </summary>
         /// <param name="tokenAudiences">Token audiences.</param>
